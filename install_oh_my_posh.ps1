@@ -17,4 +17,7 @@ mkdir $ConfigDir -Force
 Copy-Item ".\config\ohmyposhv3-2_GR.json" -Destination "$ConfigDir\$ConfigFileName" -Force
 (echo "oh-my-posh --init --shell pwsh --config $ConfigDir\$ConfigFileName | Invoke-Expression") >$PROFILE
 
-echo "Oh My Posh has beee Installed. Reload the terminal to see changes."
+Write-Host "Oh My Posh has beee Installed!" -ForegroundColor DarkGreen
+Write-Host "However, in order for this to work properly, you need to manually set the correct font in powershell:" -ForegroundColor DarkGreen
+Write-Host "In this terminal window, go to 'Settings > Windows PowerShell > Appearance', select 'CaskaydiaCove NF' and press 'Save'." -ForegroundColor DarkYellow
+Write-Host "Once this has been done, restart Terminal and you're good to go! :D" -ForegroundColor DarkYellow
